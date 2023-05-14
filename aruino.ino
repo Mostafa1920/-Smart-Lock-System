@@ -65,7 +65,7 @@ void loop()
 
         }
 
-        else
+        if (getAccessState(master, nuidPICC) == false)
         {
             digitalWrite(red,HIGH);
             digitalWrite(buzzer,HIGH);
@@ -110,7 +110,7 @@ void loop()
             servoo.write(0);
             Serial.end();
         }
-        else
+        if(x != '5')
         {
             digitalWrite(red,HIGH);
             digitalWrite(buzzer,HIGH);
